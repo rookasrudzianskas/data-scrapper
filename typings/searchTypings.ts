@@ -37,7 +37,7 @@ export interface Organic {
 }
 
 export interface Price {
-  value: number;
+  price: number;
   currency: string;
 }
 

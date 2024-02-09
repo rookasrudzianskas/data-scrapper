@@ -19,7 +19,10 @@ async function fetchSearch(searchTerm: string) {
     headers: {
       'Content-Type': 'application/json',
       'Authorization': 'Basic ' + Buffer.from(`${username}:${password}`).toString('base64'),
-    }
+    },
+    next: {
+      revalidate: 60 * 60,
+    },
   }).then((res) => res.json()).then((data) => {
     if(data.results.length === 0) return;
     const result: Result = data.results[0];
