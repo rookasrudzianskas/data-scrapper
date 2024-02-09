@@ -19,6 +19,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
+import AddToCart from "@/components/AddToCart";
 
 
 type Props = {
@@ -97,6 +98,8 @@ const ProductPage = async ({searchParams: { url } }: Props) => {
           {product?.currency}
           {product.price}
         </p>
+
+        <AddToCart product={product} />
 
         <hr />
 
