@@ -6,6 +6,7 @@ import {getCartTotal} from "@/lib/getCartTotal";
 import {groupedBySKU} from "@/lib/groupedBySKU";
 import Image from "next/image";
 import AddToCart from "@/components/AddToCart";
+import {Button} from "@/components/ui/button";
 
 const Basket = ({}) => {
   const cart = useCartStore(store => store.cart);
@@ -49,7 +50,17 @@ const Basket = ({}) => {
             </li>
           )
         })}
-      </ul>
+      </ul>\
+
+      <div className={'flex flex-col justify-end p-5'}>
+        <p className={'font-bold text-2xl text-right text-walmarkt mb-5'}>
+          Total: {basketTotal}
+        </p>
+
+        <Button className={'mt-5 h-20 bg-walmarkt hover:bg-walmarkt/50'}>
+          Checkout
+        </Button>
+      </div>
     </div>
   );
 };
