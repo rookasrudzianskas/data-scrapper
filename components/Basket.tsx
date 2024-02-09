@@ -50,7 +50,7 @@ const Basket = ({}) => {
             </li>
           )
         })}
-      </ul>\
+      </ul>
 
       <div className={'flex flex-col justify-end p-5'}>
         <p className={'font-bold text-2xl text-right text-walmarkt mb-5'}>
